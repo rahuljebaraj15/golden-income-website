@@ -1,0 +1,1002 @@
+/* Basic Reset & Body Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f7f6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header & Navigation */
+header {
+    background-color: #004d40; /* Dark Teal */
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffd700; /* Gold */
+    margin-right: 20px; /* Space between logo and nav */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap; /* Allow nav items to wrap */
+    justify-content: flex-end; /* Align to right */
+}
+
+nav ul li {
+    margin-left: 25px;
+    margin-bottom: 5px; /* Adjust for wrapping */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 5px 0;
+    position: relative;
+    white-space: nowrap; /* Prevent breaking nav links */
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #ffd700;
+    left: 0;
+    bottom: -5px;
+    transition: width .3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+nav ul li a:hover {
+    color: #ffd700; /* Gold on hover */
+}
+
+
+/* Main Content Area */
+main {
+    flex: 1; /* Allows main content to take up available space */
+    padding: 2rem;
+    max-width: 1200px; /* Wider content area */
+    margin: 0 auto;
+    width: 100%;
+}
+
+section {
+    background-color: #fff;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    animation: fadeIn 0.8s ease-out; /* Basic fade-in animation */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h1, h2, h3 {
+    color: #004d40; /* Dark Teal */
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+ul {
+    list-style-position: inside;
+    margin-bottom: 1rem;
+    padding-left: 20px; /* Indent lists */
+}
+
+ul li {
+    margin-bottom: 0.5rem;
+}
+
+.small-text {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+/* Buttons */
+.btn-primary, .btn-secondary {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    text-align: center;
+    border: none;
+}
+
+.btn-primary {
+    background-color: #ffd700; /* Gold */
+    color: #004d40; /* Dark Teal */
+    border: 2px solid #ffd700;
+}
+
+.btn-primary:hover {
+    background-color: #e6b800; /* Darker Gold */
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.btn-secondary {
+    background-color: #e0e0e0;
+    color: #333;
+    border: 2px solid #ccc;
+}
+
+.btn-secondary:hover {
+    background-color: #d0d0d0;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Home Page Specifics */
+.hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-image: linear-gradient(rgba(0, 77, 64, 0.85), rgba(0, 77, 64, 0.85)), url('https://via.placeholder.com/1500x500/004d40/ffffff?text=Forex+Background'); /* Placeholder image */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.hero h1 {
+    color: #ffd700; /* Gold */
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.big-button {
+    font-size: 1.5rem;
+    padding: 15px 35px;
+}
+
+.market-data {
+    text-align: center;
+    background-color: #f0f8ff; /* Light Blue */
+    border: 1px solid #cceeff;
+}
+
+.tradingview-widget-container {
+    height: 350px; /* Fixed height for consistency */
+    width: 100%;
+    margin-top: 1.5rem;
+    border-radius: 8px;
+    overflow: hidden; /* Ensure widget stays within bounds */
+}
+
+.forex-intro {
+    background-color: #e8f5e9; /* Light Green */
+    border-left: 5px solid #004d40;
+}
+
+.forex-intro h2, .forex-intro h3 {
+    color: #004d40;
+}
+
+.cta-bottom {
+    text-align: center;
+    padding: 3rem 2rem;
+    background-color: #004d40;
+    color: #fff;
+    border-radius: 8px;
+}
+
+.cta-bottom h2 {
+    color: #ffd700;
+    margin-bottom: 1.5rem;
+}
+
+/* How It Works Section */
+.how-it-works {
+    text-align: center;
+    background-color: #fff8e1; /* Light Yellow */
+    border: 1px solid #ffe082;
+}
+
+.steps-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.step {
+    flex: 1;
+    min-width: 200px;
+    max-width: 280px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.step:hover {
+    transform: translateY(-5px);
+}
+
+.step .icon {
+    font-size: 2.5rem;
+    color: #004d40;
+    background-color: #ffd700;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 15px;
+    font-weight: bold;
+}
+
+.step h3 {
+    color: #004d40;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+/* Testimonials Section */
+.testimonials {
+    text-align: center;
+    background-color: #e3f2fd; /* Light Blue */
+    border-right: 5px solid #2196f3; /* Blue accent */
+}
+
+.testimonials h2 {
+    color: #2196f3;
+}
+
+.testimonial-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.5rem auto;
+    max-width: 700px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.testimonial-card .quote {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.testimonial-card .author {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #004d40;
+}
+
+.testimonial-card .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+    border: 2px solid #ffd700;
+}
+
+
+/* Form Styling (Login & Register) */
+.login-form-container, .registration-form-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2.5rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+.login-form-container h1, .registration-form-container h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #004d40;
+}
+
+.login-form-container p, .registration-form-container p {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="tel"],
+.form-group input[type="number"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box; /* Include padding in width */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="password"]:focus,
+.form-group input[type="tel"]:focus,
+.form-group input[type="number"]:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #004d40;
+    box-shadow: 0 0 0 3px rgba(0, 77, 64, 0.2);
+    outline: none;
+}
+
+.form-group input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.radio-group, .checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 5px;
+}
+
+.radio-group label, .checkbox-group label {
+    font-weight: normal;
+    display: inline-block;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+.form-group small {
+    display: block;
+    color: #777;
+    margin-top: 5px;
+    font-size: 0.85rem;
+}
+
+.login-form-container .btn-primary,
+.registration-form-container .btn-primary {
+    width: auto;
+    padding: 12px 40px;
+    margin-top: 1rem;
+}
+
+.forgot-password, .no-account {
+    margin-top: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.forgot-password a, .no-account a {
+    color: #004d40;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.forgot-password a:hover, .no-account a:hover {
+    text-decoration: underline;
+}
+
+/* Referral Page Specifics */
+.referral-info {
+    text-align: center;
+}
+
+.referral-box {
+    background-color: #e8f5e9; /* Light Green */
+    border: 2px dashed #004d40;
+    padding: 2rem;
+    margin: 2rem auto;
+    border-radius: 10px;
+    max-width: 700px;
+}
+
+.referral-box h2 {
+    color: #004d40;
+    margin-bottom: 1rem;
+}
+
+.referral-link-display {
+    background-color: #dcedc8; /* Lighter Green */
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allows wrap for smaller screens */
+    gap: 10px;
+}
+
+.referral-link-display p {
+    flex-grow: 1;
+    margin: 0;
+    color: #333;
+    word-break: break-all; /* Ensures long links wrap */
+    text-align: left;
+}
+
+.referral-link-display a {
+    color: #004d40;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.referral-link-display a:hover {
+    text-decoration: underline;
+}
+
+.referral-link-display button {
+    margin-left: 15px; /* Space between link and button */
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    white-space: nowrap; /* Prevent button text from wrapping */
+}
+
+.referral-box small {
+    color: #777;
+    display: block;
+    margin-top: 10px;
+}
+
+.navigation-buttons {
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.forex-content-preview {
+    background-color: #fce4ec; /* Light Pink for contrast */
+    border-right: 5px solid #c2185b; /* A contrasting accent */
+    margin-top: 3rem;
+}
+
+.forex-content-preview h2 {
+    color: #c2185b;
+}
+
+/* Economic Calendar Page */
+.economic-calendar-content {
+    background-color: #f3e5f5; /* Light Purple */
+    border-left: 5px solid #9c27b0; /* Purple accent */
+}
+
+.economic-calendar-content h1 {
+    color: #9c27b0;
+}
+
+.calendar-embed-note {
+    background-color: #e1bee7;
+    border-radius: 5px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    color: #555;
+    text-align: center;
+}
+
+.calendar-table-container {
+    overflow-x: auto; /* Enable horizontal scrolling for tables on small screens */
+}
+
+.economic-calendar-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.economic-calendar-content th,
+.economic-calendar-content td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.economic-calendar-content th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    color: #333;
+}
+
+.high-impact {
+    background-color: #ffebee; /* Light Red */
+    color: #d32f2f; /* Red */
+    font-weight: bold;
+}
+
+.medium-impact {
+    background-color: #fffde7; /* Light Yellow */
+    color: #fbc02d; /* Yellow */
+}
+
+.low-impact {
+    background-color: #e8f5e9; /* Light Green */
+    color: #43a047; /* Green */
+}
+
+
+/* FAQ Page */
+.faq-section {
+    background-color: #e0f2f7; /* Light Cyan */
+    border-left: 5px solid #03a9f4; /* Cyan accent */
+}
+
+.faq-section h1 {
+    color: #03a9f4;
+}
+
+.faq-item {
+    background-color: #fff;
+    border: 1px solid #cceeff;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    overflow: hidden; /* For smooth details animation */
+}
+
+.faq-item details {
+    cursor: pointer;
+}
+
+.faq-item summary {
+    padding: 15px 20px;
+    font-weight: bold;
+    color: #004d40;
+    list-style: none; /* Hide default arrow */
+    position: relative;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none; /* Hide default arrow for WebKit browsers */
+}
+
+.faq-item summary::after {
+    content: '+';
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+    font-size: 1.5rem;
+    color: #004d40;
+}
+
+.faq-item details[open] summary::after {
+    content: '-';
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.faq-item p {
+    padding: 0 20px 15px;
+    margin-top: 10px;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Glossary Page */
+.glossary-section {
+    background-color: #ffebee; /* Light Red */
+    border-left: 5px solid #d32f2f; /* Red accent */
+}
+
+.glossary-section h1 {
+    color: #d32f2f;
+}
+
+.glossary-item {
+    background-color: #fff;
+    border: 1px solid #ffcdd2;
+    border-radius: 5px;
+    padding: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.glossary-item h3 {
+    color: #d32f2f;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+/* Learning Hub Page */
+.learning-hub {
+    background-color: #e0f7fa; /* Light Aqua */
+    border-left: 5px solid #0097a7; /* Aqua accent */
+}
+
+.learning-hub h1 {
+    color: #0097a7;
+}
+
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 2rem;
+}
+
+.article-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.article-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+    color: #004d40;
+}
+
+.article-card h3 a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+.article-card h3 a:hover {
+    color: #ffd700;
+}
+
+.article-card p {
+    font-size: 0.95rem;
+    color: #666;
+    flex-grow: 1; /* Makes paragraphs take up available space */
+}
+
+.article-card small {
+    display: block;
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: #888;
+}
+
+/* Article Detail Page (for learn/forex-basics.html) */
+.article-detail-page .article-content {
+    background-color: #ffffff;
+    border-left: 5px solid #004d40;
+    padding: 2.5rem;
+}
+
+.article-detail-page .article-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.article-detail-page .article-content .meta {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 1.5rem;
+}
+
+.article-detail-page .article-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.article-detail-page .article-content h2 {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #004d40;
+}
+
+.article-detail-page .article-content ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.article-detail-page .article-navigation {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Tools Page */
+.pip-calculator-section {
+    background-color: #f3e5f5; /* Light Purple */
+    border-left: 5px solid #ab47bc; /* Purple accent */
+    text-align: center;
+}
+
+.pip-calculator-section h1 {
+    color: #ab47bc;
+}
+
+.pip-calculator-container {
+    background-color: #fff;
+    border: 1px solid #d1c4e9;
+    border-radius: 8px;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 600px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.pip-calculator-container h2 {
+    text-align: center;
+    color: #ab47bc;
+    margin-bottom: 1rem;
+}
+
+.pip-calculator-container p {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.pip-calculator-container .btn-primary {
+    display: block;
+    margin: 1.5rem auto 0.5rem;
+    width: fit-content;
+}
+
+.result-box {
+    background-color: #e8f5e9;
+    border: 1px solid #c8e6c9;
+    border-radius: 5px;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.result-box h3 {
+    color: #004d40;
+    margin-bottom: 0.5rem;
+}
+
+.result-box p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0;
+}
+
+.future-tools {
+    margin-top: 3rem;
+    background-color: #fffde7;
+    border-left: 5px solid #ffca28;
+    text-align: left;
+}
+
+.future-tools h2 {
+    color: #ffca28;
+    text-align: center;
+}
+
+.future-tools ul {
+    list-style-type: circle;
+    padding-left: 40px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+    margin-top: auto; /* Pushes footer to the bottom */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+footer p {
+    margin-bottom: 0;
+}
+
+footer a {
+    color: #ffd700;
+    text-decoration: none;
+    transition: text-decoration 0.3s ease;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    main {
+        padding: 1.5rem;
+    }
+
+    .articles-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
+
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .logo {
+        margin-bottom: 1rem;
+        margin-right: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 8px 0;
+        width: 100%;
+    }
+    nav ul li a {
+        display: block; /* Make links block to fill width */
+        padding: 8px 0;
+        background-color: rgba(255,255,255,0.1); /* Slight background for mobile links */
+        border-radius: 5px;
+    }
+    nav ul li a:hover {
+        background-color: rgba(255,255,255,0.2);
+    }
+    nav ul li a::after {
+        display: none; /* Hide underline on mobile nav */
+    }
+
+
+    main {
+        padding: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .big-button {
+        font-size: 1.3rem;
+        padding: 12px 30px;
+    }
+
+    .steps-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .step {
+        max-width: 90%;
+        width: 100%;
+    }
+
+    .login-form-container, .registration-form-container, .pip-calculator-container {
+        padding: 1.5rem;
+        margin: 1rem auto;
+    }
+
+    .radio-group, .checkbox-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .referral-link-display {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .referral-link-display p {
+        text-align: center;
+    }
+
+    .referral-link-display button {
+        margin-left: 0; /* Remove side margin */
+        margin-top: 10px; /* Add top margin */
+    }
+
+    .navigation-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navigation-buttons .btn-primary,
+    .navigation-buttons .btn-secondary {
+        width: 80%; /* Make buttons wider on small screens */
+        margin: 0 auto;
+    }
+
+    .economic-calendar-content table {
+        font-size: 0.85rem;
+    }
+
+    .article-detail-page .article-content h1 {
+        font-size: 2rem;
+    }
+    .article-detail-page .article-content h2 {
+        font-size: 1.5rem;
+    }
+}
+/* Add this to your existing style.css */
+.login-message {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 0.95rem;
+    text-align: center;
+    background-color: #ffebee; /* Light red for error messages */
+    color: #d32f2f; /* Red text */
+    border: 1px solid #ffcdd2;
+}

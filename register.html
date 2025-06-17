@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golden Income - Register</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Golden Income</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="learn.html">Learn</a></li>
+                <li><a href="tools.html">Tools</a></li>
+                <li><a href="economic-calendar.html">Calendar</a></li>
+                <li><a href="glossary.html">Glossary</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="register-page">
+        <section class="registration-form-container">
+            <h1>Register with Golden Income</h1>
+            <p>Fill in your details to start your trading journey!</p>
+            <form id="registrationForm">
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="mobile">Mobile Number:</label>
+                    <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" placeholder="e.g., 9876543210" required>
+                    <small>Format: 10 digits (e.g., 9876543210)</small>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" minlength="6" required>
+                    <small>Minimum 6 characters.</small>
+                </div>
+                <!-- Aadhaar number removed as it's sensitive and not strictly needed for this demo -->
+                <!-- <div class="form-group">
+                    <label for="aadhaar">Aadhaar Number:</label>
+                    <input type="text" id="aadhaar" name="aadhaar" pattern="[0-9]{12}" placeholder="e.g., 123456789012" required>
+                    <small>Format: 12 digits</small>
+                </div> -->
+
+                <div class="form-group">
+                    <label>Trader Type:</label>
+                    <div class="radio-group">
+                        <input type="radio" id="partTime" name="trader_type" value="part_time" required>
+                        <label for="partTime">Part-time Trader</label>
+                        <input type="radio" id="fullTime" name="trader_type" value="full_time">
+                        <label for="fullTime">Full-time Trader</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <input type="checkbox" id="hasTradeKnowledge" name="has_trade_knowledge">
+                    <label for="hasTradeKnowledge">I have prior trade knowledge.</label>
+                </div>
+                
+                <div class="form-group">
+                    <label for="experienceLevel">Your Trading Experience Level:</label>
+                    <select id="experienceLevel" name="experience_level" required>
+                        <option value="">-- Select --</option>
+                        <option value="beginner">Beginner (No experience)</option>
+                        <option value="intermediate">Intermediate (Some basic knowledge/trades)</option>
+                        <option value="advanced">Advanced (Experienced trader)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="minimumCapital">Minimum Capital You Plan to Invest (INR):</label>
+                    <input type="number" id="minimumCapital" name="minimum_capital" min="5000" placeholder="e.g., 10000" required>
+                    <small>Minimum recommended capital is ₹5,000 for starting.</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="tradingGoal">What are your primary trading goals?</label>
+                    <textarea id="tradingGoal" name="trading_goal" rows="4" placeholder="e.g., Long-term wealth creation, passive income, learning opportunities."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Which markets are you interested in?</label>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="interestForex" name="interests" value="forex">
+                        <label for="interestForex">Forex</label>
+                        <input type="checkbox" id="interestStocks" name="interests" value="stocks">
+                        <label for="interestStocks">Stocks</label>
+                        <input type="checkbox" id="interestCommodities" name="interests" value="commodities">
+                        <label for="interestCommodities">Commodities</label>
+                        <input type="checkbox" id="interestCrypto" name="interests" value="crypto">
+                        <label for="interestCrypto">Cryptocurrency</label>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn-primary">Register & Get Your Link</button>
+            </form>
+            <p class="already-account">Already have an account? <a href="login.html">Login Here</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2023 Golden Income. All rights reserved. Trade responsibly.</p>
+        <p><a href="faq.html">FAQ</a> | <a href="glossary.html">Glossary</a> | <a href="about.html">About Us</a></p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

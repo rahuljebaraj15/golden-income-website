@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golden Income - Login</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Golden Income</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="learn.html">Learn</a></li>
+                <li><a href="tools.html">Tools</a></li>
+                <li><a href="economic-calendar.html">Calendar</a></li>
+                <li><a href="glossary.html">Glossary</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="login-page">
+        <section class="login-form-container">
+            <h1>Login to Your Golden Income Account</h1>
+            <p>Please login using your registered email or mobile number and password.</p>
+
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="identifier">Email or Mobile Number:</label>
+                    <input type="text" id="identifier" name="identifier" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="btn-primary">Login</button>
+                <p class="login-message" style="color: red; margin-top: 10px;"></p> <!-- For displaying messages -->
+                <p class="forgot-password"><a href="#">Forgot Password? (Coming Soon)</a></p>
+                <p class="no-account">Don't have an account? <a href="register.html">Register Here</a></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2023 Golden Income. All rights reserved. Trade responsibly.</p>
+        <p><a href="faq.html">FAQ</a> | <a href="glossary.html">Glossary</a> | <a href="about.html">About Us</a></p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
