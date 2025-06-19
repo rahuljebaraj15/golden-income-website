@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const BACKEND_URL = 'http://localhost:3000/api'; // Ensure this matches your backend server URL
+    const BACKEND_URL = 'https://golden-income-website.onrender.com/api';  // Ensure this matches your backend server URL
 
     // --- Registration Form Submission ---
     const registrationForm = document.getElementById('registrationForm');
